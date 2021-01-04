@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>voeg nieuw medicijn toe</h1>
+
+    {{ form_start(medicineForm) }}
+    {{ form_widget(medicineForm) }}
+
+    <button type="submit" class="btn btn-success">Maak</button>
+    <a href="{{ path('table') }}" class="btn btn-info">terug</a>
+    {{ form_end(medicineForm) }}
+{% endblock %}

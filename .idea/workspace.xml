@@ -20,14 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210103174627.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Medicines.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/MedicinesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210104100809.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210104112759.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210104113126.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210104113901.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TableController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/MedicijnType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/create.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/table.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/article/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/showComments.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MedicineAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MedicineAdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Medicines.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Medicines.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/showComments.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,8 +174,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../healthtwo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -173,11 +184,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Healththree\src\Form" />
       <recent name="C:\xampp\htdocs\Healththree\templates" />
     </key>
   </component>
@@ -192,6 +204,13 @@
       <workItem from="1609692045388" duration="1249000" />
       <workItem from="1609693308763" duration="3631000" />
       <workItem from="1609711798294" duration="5267000" />
+      <workItem from="1609750581764" duration="96000" />
+      <workItem from="1609750694840" duration="708000" />
+      <workItem from="1609752769563" duration="22000" />
+      <workItem from="1609752821806" duration="20000" />
+      <workItem from="1609752860735" duration="19000" />
+      <workItem from="1609752899158" duration="12000" />
+      <workItem from="1609752912408" duration="12254000" />
     </task>
     <task id="LOCAL-00001" summary="werk!">
       <created>1609692481696</created>
@@ -216,35 +235,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="werk!" />
     <option name="LAST_COMMIT_MESSAGE" value="werk!" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609712118870">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609712118870" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1609714884663">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609714884663" />
-    <state x="834" y="417" width="478" height="295" key="Github.ShareDialog" timestamp="1609692847891">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="834" y="417" width="478" height="295" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609692847891" />
-    <state x="314" y="443" key="NewPhpFileDialog" timestamp="1609712053136">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="314" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609712053136" />
-    <state x="0" y="164" key="SettingsEditor" timestamp="1609693583601">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="0" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609693583601" />
-    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609692765398">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609692765398" />
   </component>
 </project>

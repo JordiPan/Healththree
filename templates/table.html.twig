@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>medicijnen tabel</h1>
+    <table class="table table-bordered">
+        <tr>
+            <th>medicijn</th>
+            <th>werking</th>
+            <th>bijwerking</th>
+            <th>prijs</th>
+            <th>verzekerd</th>
+        </tr>
+        {% for medicine in medicines%}
+        <tr>
+            <td>{{ medicine.naam }}</td>
+                <td>{{ medicine.werking }}</td>
+                <td>{{ medicine.bijwerking }}</td>
+                <td>{{ medicine.prijs }}</td>
+                <td>{{ medicine.verzekerd }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ path('medicine_maker') }}">go back</a>
+
+{% endblock %}
