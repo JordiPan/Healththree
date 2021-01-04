@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\MedicinesRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,17 @@ class Medicines
      * @ORM\Column(type="boolean")
      */
     private $verzekerd;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Recept::class, mappedBy="medicijn")
+     */
+    private $recepts;
+
+
+    public function __construct()
+    {
+        $this->recepts = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -106,4 +119,35 @@ class Medicines
 
         return $this;
     }
+
+    /**
+     * @return Collection|Recept[]
+     */
+    public function getRecepts(): Collection
+    {
+        return $this->recepts;
+    }
+
+    public function addRecept(Recept $recept): self
+    {
+        if (!$this->recepts->contains($recept)) {
+            $this->recepts[] = $recept;
+            $recept->setMedicijn($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRecept(Recept $recept): self
+    {
+        if ($this->recepts->removeElement($recept)) {
+            // set the owning side to null (unless already changed)
+            if ($recept->getMedicijn() === $this) {
+                $recept->setMedicijn(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

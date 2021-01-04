@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">Tabel recepten ({{ recepten|length }})</h1>
+        <table class="table table-bordered">
+            <tr>
+                <th>naam</th>
+                <th>datum</th>
+                <th>periode</th>
+            </tr>
+            {% for recept in recepten%}
+                <tr>
+                    <td>{{ recept.medicijn.naam }}</td>
+                    <td>{{ recept.datum|date }}</td>
+                    <td>{{ recept.periode }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

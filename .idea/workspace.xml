@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Bezoeker/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Bezoeker/table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Medicines.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Medicines.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +172,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Healththree\templates\Dokter" />
       <recent name="C:\xampp\htdocs\Healththree\templates\assets" />
       <recent name="C:\xampp\htdocs\Healththree\templates" />
     </key>
@@ -219,35 +217,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="werk!" />
     <option name="LAST_COMMIT_MESSAGE" value="werk!" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609712118870">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609712118870" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1610291917063">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610291917063" />
-    <state x="834" y="417" width="478" height="295" key="Github.ShareDialog" timestamp="1609692847891">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="834" y="417" width="478" height="295" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609692847891" />
-    <state x="314" y="443" key="NewPhpFileDialog" timestamp="1609712053136">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="314" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609712053136" />
-    <state x="0" y="164" key="SettingsEditor" timestamp="1609693583601">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="0" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609693583601" />
-    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609692765398">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609692765398" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1610292338501">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610292338501" />
   </component>
 </project>
