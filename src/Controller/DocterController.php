@@ -26,7 +26,7 @@ class DocterController extends AbstractController
             $entityManager->persist($recept);
             $entityManager->flush();
             $this->addFlash('success', 'Recept is toegevoegd!');
-            return $this->redirectToRoute('table');
+            return $this->redirectToRoute('show_recept');
         }
 
         return $this->render('Dokter/recept.hmtl.twig', ['receptForm' => $form->createView()]);

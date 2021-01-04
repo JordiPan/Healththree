@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Medicines.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Medicines.php" afterDir="false" />
-    </list>
+    <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
