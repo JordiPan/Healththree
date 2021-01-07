@@ -6,7 +6,19 @@
     {% block stylesheets %}<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     {% endblock %}
 </head>
+
 <body>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">HealthOne</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="{{ path('homepage') }}">Home</a></li>
+            <li><a href="{{ path('table') }}">Medicijnen</a></li>
+        </ul>
+    </div>
+</nav>
 {% block body %}{% endblock %}
 {% block javascripts %}{% endblock %}
 </body>

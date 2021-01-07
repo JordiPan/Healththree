@@ -19,25 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210104100809.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210104112759.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210104113126.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210104113901.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/TableController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/MedicijnType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/create.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+    <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="CRUD toegevoegd">
+      <change afterPath="$PROJECT_DIR$/templates/Bezoeker/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Bezoeker/home.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Bezoeker/table.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MedicineAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MedicineAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Medicines.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Medicines.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MedicineAdminController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TableController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/showComments.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Bezoeker/create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/table.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +182,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Student.DESKTOP-NLE9OIH\PhpstormProjects\Healththree\templates\Bezoeker" />
       <recent name="C:\xampp\htdocs\Healththree\src\Form" />
       <recent name="C:\xampp\htdocs\Healththree\templates" />
     </key>
@@ -211,6 +205,8 @@
       <workItem from="1609752860735" duration="19000" />
       <workItem from="1609752899158" duration="12000" />
       <workItem from="1609752912408" duration="12254000" />
+      <workItem from="1610010029744" duration="1155000" />
+      <workItem from="1610011330892" duration="5691000" />
     </task>
     <task id="LOCAL-00001" summary="werk!">
       <created>1609692481696</created>
@@ -239,6 +235,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="werk!" />
-    <option name="LAST_COMMIT_MESSAGE" value="werk!" />
+    <MESSAGE value="CRUD toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRUD toegevoegd" />
   </component>
 </project>
