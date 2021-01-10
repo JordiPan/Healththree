@@ -38,7 +38,7 @@ class Medicines
     private $prijs;
 
     /**
-     * @ORM\Column(type="smallint")
+     * @ORM\Column(type="boolean")
      */
     private $verzekerd;
 
@@ -95,7 +95,7 @@ class Medicines
         return $this;
     }
 
-    public function getVerzekerd(): ?int
+    public function getVerzekerd(): ?bool
     {
         return $this->verzekerd;
     }

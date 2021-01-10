@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}Verander Medicijn{% endblock %}
+
+{% block body %}
+    <h1>Pas Medicijn aan</h1>
+
+    {{ form_start(medicineForm) }}
+    {{ form_widget(medicineForm) }}
+
+    <button type="submit" class="btn btn-success">Pas aan</button>
+    {{ form_end(medicineForm) }}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+{% block title %}Tabel{% endblock %}
+
+{% block body %}
+    <h1>medicijnen tabel ({{ medicines|length }})</h1>
+    <table class="table table-bordered">
+        <tr>
+            <th>medicijn</th>
+            <th>werking</th>
+            <th>bijwerking</th>
+            <th>prijs</th>
+            <th>verzekerd</th>
+            <th>Pas aan</th>
+            <th>verwijder</th>
+        </tr>
+        {% for medicine in medicines%}
+        <tr>
+            <td>{{ medicine.naam }}</td>
+                <td>{{ medicine.werking }}</td>
+                <td>{{ medicine.bijwerking }}</td>
+                <td>€{{ medicine.prijs }}</td>
+                <td>
+                    {% if medicine.verzekerd %}
+                    Verzekerd
+                    {% else %}
+                    Niet verzekerd
+                    {% endif %}
+                </td>
+            <td><a href="{{ path('edit_medicine', {'id': medicine.id}) }}" class="btn btn-primary">Aanpassen</a></td>
+            <td><a href="{{ path('delete_medicine', {'id': medicine.id}) }}" class="btn btn-danger">Verwijder</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ path('medicine_maker') }}" class="btn btn-success">Maak nieuwe rij</a>
+
+{% endblock %}

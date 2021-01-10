@@ -3,8 +3,10 @@ namespace App\Controller;
 
 
 use App\Entity\Medicines;
+use App\Form\MedicijnType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -13,35 +15,76 @@ class HomeController extends AbstractController {
      * @Route("/", name="homepage")
      */
     public function showHome() {
-        return $this->render('home.html.twig');
+        return $this->render('Bezoeker/home.html.twig');
     }
-    /**
-     * @Route("door/{title}", name="commentSection")
-     */
-    public function show($title, EntityManagerInterface $em) {
-        $repository = $em->getRepository(Medicines::class);
-        $medicine = $repository->findOneBy(['id' => 1]);
 
-        if (!$medicine) {
-            throw $this->createNotFoundException(sprintf("no Medicine found"));
-        }
-
-        $comments = [
-            'why die?',
-            'just live',
-            'eat sht',
-            'I kill problems with knowledge'
-        ];
-        return $this->render('showComments.html.twig', [
-            'title' => ucwords(str_replace('-',' ', $title)),
-            'comments' => $comments,
-            'medicine' => $medicine
-        ]);
-    }
     /**
-     * @Route("table")
+     * @Route("/table", name="table")
      */
     public function showTable() {
-        return new Response("Bruh");
+        $repository = $this->getDoctrine()->getRepository(Medicines::class);
+        $medicines = $repository->findAll();
+        return $this->render("Bezoeker/table.html.twig", ["medicines" => $medicines]);
+    }
+
+    /**
+     * @Route("/medicine/add", name="medicine_maker")
+     */
+    public function addMedicineAction(Request $request)
+    {
+        $medicine=new Medicines();
+        $form = $this->createForm(MedicijnType::class, $medicine);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($medicine);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('table');
+        }
+
+
+
+        return $this->render('Bezoeker/create.html.twig', [
+            'medicineForm' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("Medicine/edit/{id}", name="edit_medicine")
+     */
+    public function editMedicineAction($id, Request $request) {
+        $medicine = $this->getDoctrine()->getRepository(Medicines::class)->find($id);
+        $form = $this->createForm(MedicijnType::class, $medicine);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($medicine);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('table');
+        }
+
+
+        return $this->render('Bezoeker/edit.html.twig', [
+            'medicineForm' => $form->createView(),
+           'medicine' => $medicine
+        ]);
+
+    }
+    /**
+     * @Route("Medicine/delete/{id}", name="delete_medicine")
+     */
+    public function deleteMedicineAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $medicine = $this->getDoctrine()->getRepository(Medicines::class)->find($id);
+        $em->remove($medicine);
+        $em->flush();
+
+        return $this->redirectToRoute('table');
     }
 }
