@@ -41,7 +41,7 @@ class HomeController extends AbstractController {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($medicine);
             $entityManager->flush();
-
+            $this->addFlash('success', 'Medicijn is toegevoegd!');
             return $this->redirectToRoute('table');
         }
 
@@ -66,6 +66,7 @@ class HomeController extends AbstractController {
             $entityManager->persist($medicine);
             $entityManager->flush();
 
+            $this->addFlash('success', 'Medicijn is aangepast!');
             return $this->redirectToRoute('table');
         }
 
@@ -85,6 +86,7 @@ class HomeController extends AbstractController {
         $em->remove($medicine);
         $em->flush();
 
+        $this->addFlash('success', 'Medicijn is verwijdert!');
         return $this->redirectToRoute('table');
     }
 }
