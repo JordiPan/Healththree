@@ -8,12 +8,24 @@
                 <th>naam</th>
                 <th>datum</th>
                 <th>periode</th>
+                <th>verzekerd</th>
+                <th>Pas aan</th>
+                <th>verwijder</th>
             </tr>
             {% for recept in recepten%}
                 <tr>
                     <td>{{ recept.medicijn.naam }}</td>
-                    <td>{{ recept.datum|date }}</td>
+                    <td>{{ recept.datum|date('d-m-Y') }}</td>
                     <td>{{ recept.periode }}</td>
+                    <td>
+                        {% if recept.medicijn.verzekerd %}
+                            Verzekerd
+                        {% else %}
+                            Niet verzekerd
+                        {% endif %}
+                    </td>
+                    <td><a href="{{ path('edit_recept', {'id': recept.id}) }}" class="btn btn-primary">Aanpassen</a></td>
+                    <td><a href="{{ path('delete_recept', {'id': recept.id}) }}" class="btn btn-danger">Verwijder</a></td>
                 </tr>
             {% endfor %}
         </table>

@@ -19,7 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!" />
+    <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!">
+      <change afterPath="$PROJECT_DIR$/templates/Dokter/Createrecept.hmtl.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DocterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DoctorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ReceptType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ReceptType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Bezoeker/createMedicine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Bezoeker/editMedicine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Bezoeker/tableMedicine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dokter/recept.hmtl.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dokter/tableRecepten.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dokter/tableRecepten.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
