@@ -24,7 +24,7 @@ class HomeController extends AbstractController {
     public function showTable() {
         $repository = $this->getDoctrine()->getRepository(Medicines::class);
         $medicines = $repository->findAll();
-        return $this->render("Bezoeker/table.html.twig", ["medicines" => $medicines]);
+        return $this->render("Bezoeker/tableMedicine.html.twig", ["medicines" => $medicines]);
     }
 
     /**
@@ -47,7 +47,7 @@ class HomeController extends AbstractController {
 
 
 
-        return $this->render('Bezoeker/create.html.twig', [
+        return $this->render('Bezoeker/createMedicine.html.twig', [
             'medicineForm' => $form->createView()
         ]);
     }
@@ -71,7 +71,7 @@ class HomeController extends AbstractController {
         }
 
 
-        return $this->render('Bezoeker/edit.html.twig', [
+        return $this->render('Bezoeker/editMedicine.html.twig', [
             'medicineForm' => $form->createView(),
            'medicine' => $medicine
         ]);

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body%}
+    {% block text %}{% endblock %}
+    <div class="container">
+        {{ form_start(receptForm) }}
+        {{ form_widget(receptForm) }}
+
+        {% block button %}{% endblock %}
+        {{ form_end(receptForm) }}
+    </div>
+{% endblock %}
