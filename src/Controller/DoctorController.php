@@ -10,10 +10,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DocterController extends AbstractController
+class DoctorController extends AbstractController
 {
     /**
-     * @Route("/add/recept", name="add_recept")
+     * @Route("/dokter/add/recept", name="add_recept")
      */
     public function addRecept(Request $request){
         $recept = new Recept();
@@ -26,13 +26,13 @@ class DocterController extends AbstractController
             $entityManager->persist($recept);
             $entityManager->flush();
             $this->addFlash('success', 'Recept is toegevoegd!');
-            return $this->redirectToRoute('show_recept');
+            return $this->redirectToRoute('dokter_homepage');
         }
 
         return $this->render('Dokter/recept.hmtl.twig', ['receptForm' => $form->createView()]);
     }
     /**
-     * @Route("/show/recept", name="show_recept")
+     * @Route("/dokter", name="dokter_homepage")
      */
     public function showRecepts(){
         $repository = $this->getDoctrine()->getRepository(Recept::class);
