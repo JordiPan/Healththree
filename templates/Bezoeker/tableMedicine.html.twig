@@ -16,6 +16,11 @@
                     <a  class="nav-link" href="{{ path('table') }}">Medicijnen</a>
                 </li>
             </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_login') }}">Inloggen</a>
+                </li>
+            </ul>
         </div>
     </nav>
 {% endblock %}
@@ -30,8 +35,6 @@
                 <th>bijwerking</th>
                 <th>prijs</th>
                 <th>verzekerd</th>
-                <th>Pas aan</th>
-                <th>verwijder</th>
             </tr>
             {% for medicine in medicines%}
                 <tr>
@@ -46,12 +49,9 @@
                             Niet verzekerd
                         {% endif %}
                     </td>
-                    <td><a href="{{ path('edit_medicine', {'id': medicine.id}) }}" class="btn btn-primary">Aanpassen</a></td>
-                    <td><a href="{{ path('delete_medicine', {'id': medicine.id}) }}" class="btn btn-danger">Verwijder</a></td>
                 </tr>
             {% endfor %}
         </table>
-        <a href="{{ path('medicine_maker') }}" class="btn btn-success">Maak nieuwe rij</a>
     </div>
 
 

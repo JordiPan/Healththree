@@ -20,11 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!">
-      <change beforePath="$PROJECT_DIR$/.idea/Healththree.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Healththree.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Dokter/tableRecipes.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DocterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DoctorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210103174627.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210104100809.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210104112759.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210104113126.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210104113901.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210104163804.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210104164536.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210112154713.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210114090345.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210118093919.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DokterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MedewerkerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MedewerkerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/createMedicine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Medewerker/createMedicine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/editMedicine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Medewerker/editMedicine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Bezoeker/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/tableMedicine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Medewerker/tableMedicine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dokter/Createrecept.hmtl.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dokter/createRecipe.hmtl.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dokter/editRecept.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dokter/editRecipe.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dokter/tableRecepten.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +182,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../healthtwo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/Medewerker" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -174,10 +194,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Healththree\templates\Medewerker" />
+      <recent name="C:\xampp\htdocs\Healththree\templates\Bezoeker" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Healththree\templates" />
+      <recent name="C:\xampp\htdocs\Healththree\templates\assets\Medewerker" />
       <recent name="C:\xampp\htdocs\Healththree\templates\Dokter" />
       <recent name="C:\xampp\htdocs\Healththree\templates\assets" />
-      <recent name="C:\xampp\htdocs\Healththree\templates" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -223,5 +248,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="werk!" />
     <option name="LAST_COMMIT_MESSAGE" value="werk!" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="545" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611175267183">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="545" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611175267183" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611183021444">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611183021444" />
   </component>
 </project>

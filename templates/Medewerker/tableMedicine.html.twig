@@ -1,0 +1,78 @@
+{% extends "base.html.twig" %}
+{% block title %}Tabel{% endblock %}
+
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">HealthOne</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarItems"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarItems">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('medewerker_home') }}">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('medewerker_table') }}">Medicijnen</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_logout') }}">Uitloggen</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% if medicines is empty %}
+            <h1 class="text-center">U hebt geen medicijnen. Klik de knop onder om er een te maken!</h1>
+            <div class="container text-center">
+                <a href="{{ path('medicine_maker') }}" class="btn btn-success">Maak nieuwe rij</a>
+            </div>
+
+        {% else %}
+            <h1 class="text-center">Medicijnen tabel ({{ medicines|length }})</h1>
+            <div class="container text-center">
+                <a href="{{ path('medicine_maker') }}" class="btn btn-success">Maak nieuwe rij</a>
+            </div>
+            <br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>medicijn</th>
+                    <th>werking</th>
+                    <th>bijwerking</th>
+                    <th>prijs</th>
+                    <th>verzekerd</th>
+                    <th>Pas aan</th>
+                    <th>verwijder</th>
+                </tr>
+                {% for medicine in medicines %}
+                    <tr>
+                        <td>{{ medicine.naam }}</td>
+                        <td>{{ medicine.werking }}</td>
+                        <td>{{ medicine.bijwerking }}</td>
+                        <td>€{{ medicine.prijs }}</td>
+                        <td>
+                            {% if medicine.verzekerd %}
+                                Verzekerd
+                            {% else %}
+                                Niet verzekerd
+                            {% endif %}
+                        </td>
+                        <td><a href="{{ path('edit_medicine', {'id': medicine.id}) }}"
+                               class="btn btn-primary">Aanpassen</a></td>
+                        <td><a href="{{ path('delete_medicine', {'id': medicine.id}) }}" class="btn btn-danger">Verwijder</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </div>
+
+
+{% endblock %}
