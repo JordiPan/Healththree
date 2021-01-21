@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">HealthOne</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarItems"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('dokter_home') }}">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('recipe_table') }}">Recepten</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_logout') }}">Uitloggen</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">Tabel recepten ({{ recepten|length }})</h1>
+        <div class="container text-center">
+            <a href="{{ path('add_recipe') }}" class="btn btn-success">Maak nieuwe rij</a>
+        </div>
+        <br>
+        <table class="table table-bordered">
+            <tr>
+                <th>naam</th>
+                <th>datum</th>
+                <th>periode</th>
+                <th>verzekerd</th>
+                <th>Pas aan</th>
+                <th>verwijder</th>
+            </tr>
+            {% for recept in recepten%}
+                <tr>
+                    <td>{{ recept.medicijn.naam }}</td>
+                    <td>{{ recept.datum|date('d-m-Y') }}</td>
+                    <td>{{ recept.periode }}</td>
+                    <td>
+                        {% if recept.medicijn.verzekerd %}
+                            Verzekerd
+                        {% else %}
+                            Niet verzekerd
+                        {% endif %}
+                    </td>
+                    <td><a href="{{ path('edit_recipe', {'id': recept.id}) }}" class="btn btn-primary">Aanpassen</a></td>
+                    <td><a href="{{ path('delete_recipe', {'id': recept.id}) }}" class="btn btn-danger">Verwijder</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

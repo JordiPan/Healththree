@@ -1,21 +1,24 @@
 <?php
-
-
 namespace App\Controller;
-
-
 use App\Entity\Recept;
 use App\Form\ReceptType;
+use App\Repository\ReceptRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DoctorController extends AbstractController
+class DokterController extends AbstractController
 {
     /**
-     * @Route("/add/recept", name="add_recept")
+     * @Route("/dokter", name="dokter_home")
      */
-    public function addRecept(Request $request){
+    public function showHome() {
+        return $this->render('Dokter/dokterHome.html.twig');
+    }
+    /**
+     * @Route("dokter/add/recipe", name="add_recipe")
+     */
+    public function addRecipe(Request $request){
         $recept = new Recept();
         $form = $this->createForm(ReceptType::class, $recept);
 
@@ -26,26 +29,24 @@ class DoctorController extends AbstractController
             $entityManager->persist($recept);
             $entityManager->flush();
             $this->addFlash('success', 'Recept is toegevoegd!');
-            return $this->redirectToRoute('show_recepten');
+            return $this->redirectToRoute('recipe_table');
         }
 
-        return $this->render('Dokter/Createrecept.hmtl.twig', ['receptForm' => $form->createView()]);
+        return $this->render('Dokter/createRecipe.hmtl.twig', ['receptForm' => $form->createView()]);
     }
     /**
-     * @Route("/show/recepten", name="show_recepten")
+     * @Route("dokter/table", name="recipe_table")
      */
-    public function showRecepts(){
+    public function showRecipes(){
         $repository = $this->getDoctrine()->getRepository(Recept::class);
         $recepten = $repository->findAll();
-        return $this->render("Dokter/tableRecepten.html.twig", [
-            "recepten" => $recepten
-        ]);
+        return $this->render("Dokter/tableRecipes.html.twig", ["recepten" => $recepten]);
     }
+
     /**
-     * @Route("/edit/recept/{id}", name="edit_recept")
+     * @Route("dokter/recipe/edit/{id}", name="edit_recipe")
      */
-    public function editMedicineAction($id, Request $request)
-    {
+    public function editRecipeAction($id, Request $request) {
         $recept = $this->getDoctrine()->getRepository(Recept::class)->find($id);
         $form = $this->createForm(ReceptType::class, $recept);
 
@@ -57,23 +58,26 @@ class DoctorController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('success', 'Recept is aangepast!');
-            return $this->redirectToRoute('show_recepten');
+            return $this->redirectToRoute('recipe_table');
         }
-        return $this->render('Dokter/editRecept.html.twig', [
+
+
+        return $this->render('Dokter/editRecipe.html.twig', [
             'receptForm' => $form->createView(),
             'recept' => $recept
         ]);
+
     }
     /**
-     * @Route("/delete/recept/{id}", name="delete_recept")
+     * @Route("dokter/recipe/delete/{id}", name="delete_recipe")
      */
-    public function deleteMedicineAction($id) {
+    public function deleteRecipeAction($id) {
         $em = $this->getDoctrine()->getManager();
-        $recept = $this->getDoctrine()->getRepository(Recept::class)->find($id);
-        $em->remove($recept);
+        $recipe = $this->getDoctrine()->getRepository(Recept::class)->find($id);
+        $em->remove($recipe);
         $em->flush();
 
         $this->addFlash('success', 'Recept is verwijdert!');
-        return $this->redirectToRoute('show_recepten');
+        return $this->redirectToRoute('recipe_table');
     }
 }
