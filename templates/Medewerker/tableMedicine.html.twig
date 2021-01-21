@@ -3,7 +3,10 @@
 
 {% block nav %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand">HealthOne</a>
+        <a class="navbar-brand">
+            <span class="fa fa-medkit text-danger"></span>
+            HealthOne
+        </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarItems"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,12 +39,12 @@
             </div>
 
         {% else %}
-            <h1 class="text-center">Medicijnen tabel ({{ medicines|length }})</h1>
+            <h1 class="text-center"><span class="fa fa-capsules text-danger"></span>Medicijnen tabel ({{ medicines|length }})</h1>
             <div class="container text-center">
                 <a href="{{ path('medicine_maker') }}" class="btn btn-success">Maak nieuwe rij</a>
             </div>
             <br>
-            <table class="table table-bordered">
+            <table class="table table-bordered text-center">
                 <tr>
                     <th>medicijn</th>
                     <th>werking</th>
@@ -64,9 +67,8 @@
                                 Niet verzekerd
                             {% endif %}
                         </td>
-                        <td><a href="{{ path('edit_medicine', {'id': medicine.id}) }}"
-                               class="btn btn-primary">Aanpassen</a></td>
-                        <td><a href="{{ path('delete_medicine', {'id': medicine.id}) }}" class="btn btn-danger">Verwijder</a>
+                        <td><a href="{{ path('edit_medicine', {'id': medicine.id}) }}" class="fas fa-pencil-alt text-info"></a></td>
+                        <td><a href="{{ path('delete_medicine', {'id': medicine.id}) }}" class="fas fa-trash-alt text-danger"></a>
                         </td>
                     </tr>
                 {% endfor %}
