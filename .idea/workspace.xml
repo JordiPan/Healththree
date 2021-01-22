@@ -21,6 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dokter/createRecipe.hmtl.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dokter/createRecipe.hmtl.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dokter/editRecipe.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dokter/editRecipe.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Medewerker/createMedicine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Medewerker/createMedicine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Medewerker/editMedicine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Medewerker/editMedicine.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,6 +1,33 @@
 {% extends 'base.html.twig' %}
 {% block title %}creëer medicijn{% endblock %}
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">
+            <span class="fa fa-medkit text-danger"></span>
+            HealthOne
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarItems"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarItems">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('medewerker_home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('medewerker_table') }}">Medicijnen</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_logout') }}">Uitloggen</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+{% endblock %}
 {% block body %}
     <h1>Voeg nieuw medicijn toe</h1>
 
