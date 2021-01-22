@@ -3,7 +3,10 @@
 {% block title %}Log in!{% endblock %}
 {% block nav %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-        <a class="navbar-brand">HealthOne</a>
+        <a class="navbar-brand">
+            <span class="fa fa-medkit text-danger"></span>
+            HealthOne
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,7 +29,6 @@
 {% endblock %}
 {% block body %}
     <div class="container">
-
         <form method="post">
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -38,7 +40,10 @@
                 </div>
             {% endif %}
 
-            <h1 class="h3 mb-3 font-weight-normal">Log in</h1>
+            <h1 class="h3 mb-3 font-weight-normal">
+                Login
+                <span class="fa fa-address-card-o"></span>
+            </h1>
             <label for="inputUsername">Username</label>
             <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" required autofocus>
             <label for="inputPassword">Password</label>
@@ -47,17 +52,12 @@
             <input type="hidden" name="_csrf_token"
                    value="{{ csrf_token('authenticate') }}"
             >
-
-            {#
-            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-            See https://symfony.com/doc/current/security/remember_me.html
-
             <div class="checkbox mb-3">
                 <label>
                     <input type="checkbox" name="_remember_me"> Remember me
                 </label>
             </div>
-            #}
+
 
             <button class="btn btn-lg btn-primary" type="submit">
                 Sign in

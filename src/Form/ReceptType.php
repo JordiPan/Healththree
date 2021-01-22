@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Medicines;
+use App\Entity\Patient;
 use App\Entity\Recept;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -23,6 +24,11 @@ class ReceptType extends AbstractType
                 [
                     'class' => Medicines::class,
                     'choice_label' => 'naam'
+                ])
+            ->add('patient', EntityType::class,
+                [
+                    'class' => Patient::class,
+                    'choice_label' => 'firstName'
                 ])
         ;
     }
