@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-{% block title %}Verander Medicijn{% endblock %}
 {% block nav %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand">
@@ -13,14 +12,11 @@
 
         <div class="collapse navbar-collapse" id="navbarItems">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('medewerker_home') }}">Home</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('apotheker_home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('medewerker_table') }}">Medicijnen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('patient_table') }}">Patiënten</a>
+                    <a class="nav-link" href="{{ path('apotheker_recipe_table') }}">Recepten</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -32,13 +28,10 @@
     </nav>
 {% endblock %}
 {% block body %}
-    <div class="container">
-        <h1>Pas Medicijn aan</h1>
-
-        {{ form_start(medicineForm) }}
-        {{ form_widget(medicineForm) }}
-
-        <button type="submit" class="btn btn-success">Pas aan</button>
-        {{ form_end(medicineForm) }}
+    <div class="jumbotron">
+        <h1 class="display-3">Welkom op HealthOne</h1>
+        <p class="lead">Dit website is bedoeld voor mensen die te maken hebben met verzekeringen</p>
+        <hr class="my-2">
+        <p>Welkom, apotheker {{ app.user.username }}</p>
     </div>
 {% endblock %}

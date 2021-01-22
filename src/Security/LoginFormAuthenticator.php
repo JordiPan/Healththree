@@ -94,13 +94,17 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
-        // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
-        if ($this->authorizationChecker->isGranted("ROLE_DOKTER")) {
-            return new RedirectResponse($this->urlGenerator->generate('dokter_home'));
+
+        if ($this->authorizationChecker->isGranted("ROLE_APOTHEKER")) {
+            return new RedirectResponse($this->urlGenerator->generate('apotheker_home'));
         }
         else if($this->authorizationChecker->isGranted("ROLE_MEDEWERKER")) {
             return new RedirectResponse($this->urlGenerator->generate("medewerker_home"));
         }
+        else if($this->authorizationChecker->isGranted("ROLE_DOKTER")) {
+            return new RedirectResponse($this->urlGenerator->generate("dokter_home"));
+        }
+        return new RedirectResponse($this->urlGenerator->generate('homepage'));
     }
 
     protected function getLoginUrl()

@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">
+            <span class="fa fa-medkit text-danger"></span>
+            HealthOne
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarItems"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarItems">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('medewerker_home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('medewerker_table') }}">Medicijnen</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('patient_table') }}">Patiënten</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_logout') }}">Uitloggen</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center"><span class="fas fa-id-card"></span> Patiënten tabel ({{ patients|length }})</h1>
+        <div class="container text-center">
+            <a href="{{ path('patient_maker') }}" class="btn btn-success">Maak nieuwe rij</a>
+        </div>
+        <br>
+        <table class="table table-bordered">
+            <tr>
+                <th>voornaam</th>
+                <th>tussenvoegsel</th>
+                <th>achternaam</th>
+                <th>telefoonnummer</th>
+                <th>e-mail</th>
+                <th>postcode</th>
+                <th>aanpassen</th>
+                <th>verwijder</th>
+            </tr>
+            {% for patient in patients%}
+                <tr>
+                    <td>{{ patient.firstName }}</td>
+                    <td>{{ patient.middleName }}</td>
+                    <td>{{ patient.lastName }}</td>
+                    <td>{{ patient.phoneNumber }}</td>
+                    <td>{{ patient.emailAddress }}</td>
+                    <td>{{ patient.postalCode }}</td>
+                    <td><a href="{{ path('edit_patient', {'id': patient.id}) }}" class="fas fa-pencil-alt text-info"></a></td>
+                    <td><a href="{{ path('delete_patient', {'id': patient.id}) }}" class="fas fa-trash-alt text-danger"></a>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
+

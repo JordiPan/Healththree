@@ -21,10 +21,19 @@
   <component name="ChangeListManager">
     <list default="true" id="bc59dcbd-86be-4a20-a181-568fc1e770ae" name="Default Changelist" comment="werk!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DokterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ApothekerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MedewerkerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MedewerkerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Bezoeker/tableMedicine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Bezoeker/tableMedicine.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Dokter/createRecipe.hmtl.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dokter/createRecipe.hmtl.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dokter/dokterHome.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dokter/dokterHome.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Dokter/editRecipe.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dokter/editRecipe.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dokter/tableRecipes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dokter/tableRecipes.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Medewerker/createMedicine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Medewerker/createMedicine.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Medewerker/editMedicine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Medewerker/editMedicine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Medewerker/medewerkerHome.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Medewerker/medewerkerHome.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Medewerker/tableMedicine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Medewerker/tableMedicine.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,15 +183,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Healththree\templates\Medewerker" />
-      <recent name="C:\xampp\htdocs\Healththree\templates\Bezoeker" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Healththree\templates" />
       <recent name="C:\xampp\htdocs\Healththree\templates\assets\Medewerker" />
       <recent name="C:\xampp\htdocs\Healththree\templates\Dokter" />
       <recent name="C:\xampp\htdocs\Healththree\templates\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Healththree\templates\Medewerker" />
+      <recent name="C:\xampp\htdocs\Healththree\templates\Apotheker" />
+      <recent name="C:\xampp\htdocs\Healththree\templates\Bezoeker" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -200,6 +210,7 @@
       <workItem from="1610961356684" duration="3458000" />
       <workItem from="1610966999805" duration="6747000" />
       <workItem from="1611340515940" duration="719000" />
+      <workItem from="1611346433289" duration="4777000" />
     </task>
     <task id="LOCAL-00001" summary="werk!">
       <created>1609692481696</created>
@@ -231,13 +242,21 @@
     <option name="LAST_COMMIT_MESSAGE" value="werk!" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="545" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611175267183">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611348933474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="545" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611175267183" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611183021444">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611348933474" />
+    <state x="545" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611348345498">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611183021444" />
+    <state x="545" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611348345498" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611347667770">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611347667770" />
+    <state x="745" y="242" key="NewPhpClassDialog" timestamp="1611346766336">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="745" y="242" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611346766336" />
   </component>
 </project>

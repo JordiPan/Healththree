@@ -1,8 +1,12 @@
 <?php
+
+
 namespace App\Controller;
+
+
+use App\Entity\Patient;
 use App\Entity\Recept;
 use App\Form\ReceptType;
-use App\Repository\ReceptRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,6 +19,7 @@ class DokterController extends AbstractController
     public function showHome() {
         return $this->render('Dokter/dokterHome.html.twig');
     }
+
     /**
      * @Route("dokter/add/recipe", name="add_recipe")
      */
@@ -35,7 +40,7 @@ class DokterController extends AbstractController
         return $this->render('Dokter/createRecipe.hmtl.twig', ['receptForm' => $form->createView()]);
     }
     /**
-     * @Route("dokter/table", name="recipe_table")
+     * @Route("dokter/recipe_table", name="recipe_table")
      */
     public function showRecipes(){
         $repository = $this->getDoctrine()->getRepository(Recept::class);
@@ -79,5 +84,13 @@ class DokterController extends AbstractController
 
         $this->addFlash('success', 'Recept is verwijdert!');
         return $this->redirectToRoute('recipe_table');
+    }
+    /**
+     * @Route("dokter/patient_table", name="doctor_patient_table")
+     */
+    public function showPatients(){
+        $repository = $this->getDoctrine()->getRepository(Patient::class);
+        $patients = $repository->findAll();
+        return $this->render("Dokter/tablePatients.html.twig", ["patients" => $patients]);
     }
 }

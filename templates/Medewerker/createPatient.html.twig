@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block title %}Verander Medicijn{% endblock %}
+
 {% block nav %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand">
@@ -31,14 +31,18 @@
         </div>
     </nav>
 {% endblock %}
+
 {% block body %}
     <div class="container">
-        <h1>Pas Medicijn aan</h1>
+        <h1>Voeg nieuw Patiënt toe</h1>
 
-        {{ form_start(medicineForm) }}
-        {{ form_widget(medicineForm) }}
+        {{ form_start(patientForm) }}
+        {{ form_widget(patientForm) }}
 
-        <button type="submit" class="btn btn-success">Pas aan</button>
-        {{ form_end(medicineForm) }}
+        <button type="submit" class="btn btn-success">Maak</button>
+        {{ form_end(patientForm) }}
     </div>
 {% endblock %}
+
+
+
